@@ -1,0 +1,116 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+ 
+
+.banniere{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image:  url('~src/assets/image/11.jpg') ;
+    background-size: cover;
+
+}
+
+.banniere .contenu{
+    max-width: 90%;
+    text-align: center;
+   
+
+}
+.banniere .contenu h2{
+    color: #fff;
+    font-size: 3em;
+    text-transform: capitalize;
+
+}
+.contenu p:nth-child(2){
+    color: #fff;
+    font-size: 1.3em;
+
+}
+
+
+section{
+    padding: 100px;
+}
+
+.seven h1 {
+text-align: center;
+    font-size:50px; font-weight:300; color:#222; letter-spacing:1px;
+    text-transform: capitalize;
+
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+
+   
+}
+
+.seven h1:after,.seven h1:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #1fbdfb;
+    border-top: 1px solid #1fbdfb;
+    height: 5px;
+  background-color:#f8f8f8;
+
+}
+
+
+
+    .images{
+    margin-top: -100px;
+}
+
+
+
+.images .contenu{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.images .contenu .box{
+    width: 350px;
+    margin: 20px;
+    border: 20px solid #fff;
+    box-shadow: 20px 15px 35px rgba(0,0,0, 0.8);
+}
+
+.images .contenu .box .imbox{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.images .contenu .box .imbox img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.images .contenu .box .text{
+    text-align: center;
+    font-weight: 300px;
+    color: #111;
+}
+
+.images .contenu .box .text h3{
+    font-weight: 400;
+}
