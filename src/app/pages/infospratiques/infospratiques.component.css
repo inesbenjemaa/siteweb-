@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
 .header{
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),  url('~src/assets/image/7.jpg') center/cover no-repeat;
     min-height: 100vh;
@@ -48,6 +49,7 @@
     margin: 15px auto;
     cursor: pointer;
     transition: var(--transition);
+    color: #D4AA22;
 }
 .btn:hover{
     opacity: 0.85;
@@ -76,7 +78,7 @@ img{
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 30px;
-    color: ##5363db;
+    color: #5363db;
     border-bottom: 5px solid var(--dark);
     width: 235px;
     margin: 15px 0;
@@ -90,10 +92,12 @@ img{
 /* service */
 .services{
     margin: 40px 0;
+
 }
 .service{
     display: flex;
     margin: 30px 0;
+
 }
 .service-icon{
     flex: 30%;
@@ -106,6 +110,7 @@ img{
 }
 .service-content h2{
     opacity: 0.7;
+
   
 }
 
@@ -117,7 +122,8 @@ img{
         grid-column-gap: 30px;
     }
     .title h2{
-        font-size: 10px!important;
+        font-size: 30px!important;
+        color: #D7BE69;
 
     }
 }
@@ -229,7 +235,7 @@ img{
 .rate span{
     font-size: 40px;
     font-weight: 900;
-    color: #000;
+    color: #D4AA22;
 }
 .room-image{
     overflow: hidden;
@@ -278,7 +284,7 @@ img{
 .customers{
     margin-top: 40px;
     padding: 40px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('~src/assets/image/7.jpg') center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('~src/assets/image/38.jpg') center/cover no-repeat fixed;
 }
 .customer{
     background: #fff;
@@ -295,6 +301,7 @@ img{
 }
 .customer h3{
     font-size: 25px;
+    color:  #00CED1;
 }
 .customer p{
     opacity: 0.7;
@@ -337,3 +344,4 @@ img{
         height: 100px;
     }
 }
+
