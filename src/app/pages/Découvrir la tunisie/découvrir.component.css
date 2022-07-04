@@ -326,3 +326,8 @@ element.style {
     margin-left: 20px;
 
 }
+.bloc_focus_accueil .bloc_media .imagegrande12 {
+    display: block;
+    width: 559px;
+   margin-left: 10px;
+}

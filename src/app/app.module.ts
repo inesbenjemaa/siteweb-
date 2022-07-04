@@ -10,6 +10,7 @@ import { DécouvrirComponent } from './pages/Découvrir la tunisie/Découvrir.co
 import { ExperiencesComponent } from './pages/experiences/experiences.component';
 import { InfospratiquesComponent } from './pages/infospratiques/infospratiques.component';
 import { DestinationsComponent } from './pages/Destinations/Destinations.component';
+import { BookingComponent } from './pages/booking/booking.component';
 
 
 
@@ -27,6 +28,7 @@ import { DestinationsComponent } from './pages/Destinations/Destinations.compone
     ExperiencesComponent,
     InfospratiquesComponent,
     DestinationsComponent,
+    BookingComponent,
 
   ],
   imports: [

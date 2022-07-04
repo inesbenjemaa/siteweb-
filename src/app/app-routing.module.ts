@@ -6,6 +6,7 @@ import { DécouvrirComponent } from './pages/Découvrir la tunisie/Découvrir.co
 import { ExperiencesComponent } from './pages/experiences/experiences.component';
 import { InfospratiquesComponent } from './pages/infospratiques/infospratiques.component';
 import { DestinationsComponent } from './pages/Destinations/Destinations.component';
+import { BookingComponent } from './pages/booking/booking.component';
 
 const routes: Routes = [
   {path:'',     component:HomeComponent  },
@@ -14,6 +15,7 @@ const routes: Routes = [
 {path:'Experiences',component:ExperiencesComponent},
 {path:'Infospratiques',component:InfospratiquesComponent},
   {path:'Destinations',component:DestinationsComponent},
+ {path:'Booking',component:BookingComponent},
 
   
 ];

@@ -1,12 +1,38 @@
 <!DOCTYPE html>
-  <header class = "header" id = "header">
-
-            <div class = "head-bottom flex">
-                <h2>NICE AND COMFORTABLE PLACE TO STAY</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est quos veniam impedit numquam itaque voluptatum, dicta asperiores accusamus, eligendi neque ut incidunt, modi harum molestiae atque natus officia minima.</p>
-                
-            </div>
-        </header>
+  <div class="header">
+            
+                <div class="slider">
+                    <div class="leftside">
+                        <div class="container">
+                            <h2>La Badira</h2>
+                            <br>
+                            <p class="parag">
+                              La Badira … un siècle de Hammamet  
+                            </p>
+                            <br>
+                            <hr class="hr">
+                            <br>
+                            <p class="text">
+                                Le nom "Badira : aussi lumineuse que la pleine lune" apparait comme une évidence .<br>
+                             Dans la foulée, des dizaines d'artistes sont venus rechercher à Hammamet sa lumière,<br>
+                                
+                                
+                            </p>
+                            <br>
+                            <hr class="hr">
+                            
+                            
+                        </div>
+                    </div>
+                   
+                    <div class="col50">
+        <div class="img">
+            <img src="assets/image/444.jpg" alt="">
+        </div>   
+       </div>
+                </div>
+                     
+      </div>
 
         <!-- body content  -->
         <section class = "services sec-width" id = "services">
@@ -110,7 +136,7 @@
 
         <section class = "rooms sec-width" id = "rooms">
             <div class = "title">
-                <h2>rooms</h2>
+                <h2>Chambres</h2>
             </div>
             <div class = "rooms-container">
                 <!-- single room -->
@@ -139,7 +165,7 @@
                         <p class = "rate">
                             <span>800 TND /</span> Par Nuit
                         </p>
-                        <button type = "button" class = "btn">book now</button>
+                        <button type = "button" class = "btn" (click)="gotoBooking()" >Réserver</button>
                     </div>
                 </article>
                 <!-- end of single room -->
@@ -170,7 +196,7 @@
                         <p class = "rate">
                             <span>1500 TND /</span> Par Nuit
                         </p>
-                        <button type = "button" class = "btn">book now</button>
+                        <button type = "button" class = "btn" (click)="gotoBooking()">Réserver</button>
                     </div>
                 </article>
                 <!-- end of single room -->
@@ -202,7 +228,7 @@
                         <p class = "rate">
                             <span>1600 TND/</span> Par Nuit
                         </p>
-                        <button type = "button" class = "btn">book now</button>
+                        <button type = "button" class = "btn"  (click)="gotoBooking()">Réserver</button>
                     </div>
                 </article>
                 <!-- end of single room -->
@@ -213,7 +239,7 @@
         <section class = "customers" id = "customers">
             <div class = "sec-width">
                 <div class = "title">
-                    <h2>customers</h2>
+                    <h2>Clients</h2>
                 </div>
                 <div class = "customers-container">
                     <!-- single customer -->

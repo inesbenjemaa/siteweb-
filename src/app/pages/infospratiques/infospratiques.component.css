@@ -1,31 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
-.header{
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),  url('~src/assets/image/7.jpg') center/cover no-repeat;
-    min-height: 100vh;
-    color: #fff;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    align-content: stretch;
+
+.container{
+    width: 1000px;margin: auto;}
+
+.header .slider{
+   background: linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.1)),  url('~src/assets/image/1000.jpg') center/cover no-repeat fixed;
+ background-size: cover;  height:600px;}
+.header .slider .leftside{
+    margin-top:120px; float: left; width:450px;margin-left: 140px;}
+.header .slider .leftside h2{
+    font-family:"Palatino Linotype";font-size:80px;color: #fff;}
+
+.header .slider .leftside .parag{
+    color:#fff; text-transform:uppercase; font-family:"Times New Roman"; font-size:30px;}
+.hr{
+    width: 70px; float: left; }
+.header .slider .leftside .text{
+    color:#fff; font-family:"Times New Roman"; font-size:17px;}
+.header .slider .leftside .pdf{
+    color:#D4AA22;font-family:"Tahoma"; font-size:20px; }
+
+.header .slider .rightside{
+    margin-top:150px; margin-right: 150px; float: right; width: 300px;}
+.header .slider .rightside .first{
+    color: #D4AA22; width: 280px;font-size: 23px;text-transform:capitalize;background-color:#A9A9A9; font-family: "Book Antiqua"; padding-left: 20px; padding-top:20px; height:50px;}
+.header .slider .rightside .track{ 
+    background-color:#D4AA22; border: none;width: 300px;height: 200px;}
+input[type="text"],[type="email"],[type="password"]{padding: 12px;width: 240px;margin: 10px 20px 2px 20px; border: none; border-bottom: 1px solid #cccccc;}
+input:focus {background-color:#000; color: #FFF;}
+select{padding: 5px;width: 110px;margin: 5px 10px 0px 10px ; border: none; border-bottom: 1px solid #cccccc; }
+.header .slider .rightside {width: 300px; height: 60px;color:#8B0000;background-color:#000;border:none; font-size: 30px; font-weight: bold; }
+.track{border-radius: 15px;}
+
+
+ .col50 img{
+    height: 450px;
+    width: 700px;
+    position: relative;
+    top: 100px; left: 150px;
+    
 }
-.head-bottom{
-    flex: 1;
-    text-align: center;
-    width: 80vw;
-    margin: 0 auto;
-}
-.head-bottom h2{
-    padding: 22px 0;
-    font-size: 45px;
-    border-bottom: 1px solid #fff;
-}
-.head-bottom p{
-    opacity: 0.7;
-    font-size: 20px;
-    margin: 45px auto;
-    width: 60vw;
-}
+
+
 :root{
     --transition: all 0.7s ease;
    
