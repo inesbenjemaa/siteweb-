@@ -7,14 +7,14 @@ import {Router} from'@angular/router' ;
 })
 export class InfospratiquesComponent implements OnInit {
 
+
 constructor(private router: Router) { }
   
   ngOnInit(): void {
   }
 
-
-gotoBooking() {
-  this.router.navigate(["/Booking"])
- }
-
+gotoDispo() {
+  this.router.navigate(["/Dispo"])
 }
+}
+

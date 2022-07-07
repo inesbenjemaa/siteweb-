@@ -11,6 +11,7 @@ import { ExperiencesComponent } from './pages/experiences/experiences.component'
 import { InfospratiquesComponent } from './pages/infospratiques/infospratiques.component';
 import { DestinationsComponent } from './pages/Destinations/Destinations.component';
 import { BookingComponent } from './pages/booking/booking.component';
+import { DispoComponent } from './pages/dispo/dispo.component';
 
 
 
@@ -29,6 +30,7 @@ import { BookingComponent } from './pages/booking/booking.component';
     InfospratiquesComponent,
     DestinationsComponent,
     BookingComponent,
+    DispoComponent,
 
   ],
   imports: [

@@ -67,6 +67,7 @@ select{padding: 5px;width: 110px;margin: 5px 10px 0px 10px ; border: none; borde
     cursor: pointer;
     transition: var(--transition);
     color: #D4AA22;
+
 }
 .btn:hover{
     opacity: 0.85;
@@ -164,7 +165,9 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
+
 .book-form input[type = "submit"]{
     margin: 18px 0 0 0;
     background-color: #0b85d6 ;
@@ -173,6 +176,7 @@ img{
 }
 .book-form label, .book-form input{
     width: 100%;
+    
 }
 .book-form label{
     font-weight: 600;
@@ -251,7 +255,7 @@ img{
 }
 .rate span{
     font-size: 40px;
-    font-weight: 900;
+    font-weight: 500;
     color: #D4AA22;
 }
 .room-image{

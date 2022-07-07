@@ -129,7 +129,7 @@
                     <input type = "number" min = "1" value = "1" id = "rooms">
                 </div>
                 <div class = "form-item">
-                    <input type = "submit" class = "btn" value = "Vérifier la disponibilité">
+                    <input type = "submit" class = "btn" (click)="gotoDispo()"  value = "Vérifier la disponibilité">
                 </div>
             </form>
         </div>
@@ -163,9 +163,9 @@
                         <p>Nos suites Fell standards de 45 m2 disposent toutes d'une douche en 'open space'. La décoration, d'inspiration orientale, s'appuie sur l'artisanat local. Les camaieux de blanc et de beige lui apportent une touche de raffinement cher à l'esprit de notre hôtel.</p>
                         
                         <p class = "rate">
-                            <span>800 TND /</span> Par Nuit
+                            <span>Occupation/</span> 2 adultes
                         </p>
-                        <button type = "button" class = "btn" (click)="gotoBooking()" >Réserver</button>
+                        
                     </div>
                 </article>
                 <!-- end of single room -->
@@ -194,9 +194,9 @@
                         </p>
                         <p>Grand artiste français ayant marqué le XXème siècle, Jean Cocteau était visionnaire & impresario de son temps.Charmé par Hammamet, qui à l’époque était une petite ville de pêcheurs, Jean Cocteau y séjourna à plusieurs reprises et s’en inspira pour créer ses œuvres littéraires et artistiques.Amoureux de l’art et de la tranquillité, la suite Jean Cocteau vous séduira par son univers singulier qui vous transportera dans le monde artistique des années 50 !</p>
                         <p class = "rate">
-                            <span>1500 TND /</span> Par Nuit
+                          <span>Occupation/</span> 2 adultes
                         </p>
-                        <button type = "button" class = "btn" (click)="gotoBooking()">Réserver</button>
+                        
                     </div>
                 </article>
                 <!-- end of single room -->
@@ -226,9 +226,9 @@
                         
                         <p>La suite Georges Sebastian retrace ce passé riche des années 30 où art de recevoir rimait avec fêtes somptueuses et cuisine divine.Une atmosphère légère et agréable vous y attend.</p>
                         <p class = "rate">
-                            <span>1600 TND/</span> Par Nuit
+                            <span>Occupation/</span> 2 adultes
                         </p>
-                        <button type = "button" class = "btn"  (click)="gotoBooking()">Réserver</button>
+                        
                     </div>
                 </article>
                 <!-- end of single room -->
@@ -298,4 +298,8 @@
 
         
         <script src="script.js"></script>
+
+
+
+
     
