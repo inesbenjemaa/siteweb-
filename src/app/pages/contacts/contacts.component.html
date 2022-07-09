@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
      <header> 
   <section
      class="container">
@@ -12,7 +11,6 @@
           <p class="text">
             Nous restons à votre disposition pour toute information que vous souhaiter connaître. 
           </p>
-
           <div class="info">
             <div class="information">
               <img src="assets/image/1234.png" class="icon" alt="" />
@@ -32,17 +30,16 @@
             <p>Communiquez avec nous :</p>
             <div class="social-icons">
               <a href="#">
-                <i class="fab fa-facebook-f"></i>
-
+                   <fa-icon [icon]="faFacebook"></fa-icon>
               </a>
               <a href="#">
-                <i class="fab fa-twitter"></i>
+                   <fa-icon [icon]="faTwitter"></fa-icon>
               </a>
               <a href="#">
-                <i class="fab fa-instagram"></i>
+                   <fa-icon [icon]="faInstagram"></fa-icon>
               </a>
               <a href="#">
-                <i class="fab fa-linkedin-in"></i>
+                   <fa-icon [icon]="faLinkedinIn"></fa-icon>
               </a>
             </div>
           </div>
@@ -55,30 +52,21 @@
           <form action="index.html" autocomplete="off">
             <h3 class="title">Contactez-nous</h3>
             <div class="input-container">
-              <input type="text" name="name" class="input" />
-              <label for="">Nom</label>
-              <span>Nom</span>
+              <input type="text" name="name" class="input" placeholder="Nom"/>
             </div>
             <div class="input-container">
-              <input type="email" name="email" class="input" />
-              <label for="">Email</label>
-              <span>Email</span>
+              <input type="email" name="email" class="input" placeholder="Email" />
             </div>
             <div class="input-container">
-              <input type="tel" name="phone" class="input" />
-              <label for="">Téléphone</label>
-              <span>Téléphone</span>
+              <input type="tel" name="phone" class="input" placeholder="Téléphone"/>
             </div>
             <div class="input-container textarea">
-              <textarea name="message" class="input"></textarea>
-              <label for="">Message</label>
-              <span>Message</span>
+              <textarea name="message" class="input" placeholder="Message"></textarea>
             </div>
             <input type="submit" value="Envoyer" class="btn" />
           </form>
         </div>
       </div>
-   
 
     <script src="app.js"></script>
   </section>

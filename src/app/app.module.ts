@@ -12,6 +12,7 @@ import { InfospratiquesComponent } from './pages/infospratiques/infospratiques.c
 import { DestinationsComponent } from './pages/Destinations/Destinations.component';
 import { BookingComponent } from './pages/booking/booking.component';
 import { DispoComponent } from './pages/dispo/dispo.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -35,7 +36,8 @@ import { DispoComponent } from './pages/dispo/dispo.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
