@@ -26,10 +26,6 @@
               "src/styles.css",
               "node_modules/font-awesome/css/font-awesome.css"
             ],
-
-  
-
-
             "scripts": []
           },
           "configurations": {
@@ -98,6 +94,16 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "projet:build:production",
+            "firebaseProject": "visit-tunisia-30e7d",
+            "firebaseHostingSite": "visit-tunisia-30e7d"
           }
         }
       }

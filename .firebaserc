@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "visit-tunisia-30e7d": {
+      "hosting": {
+        "projet": [
+          "visit-tunisia-30e7d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "visit-tunisia-30e7d"
+  }
+}

@@ -13,8 +13,11 @@ import { DestinationsComponent } from './pages/Destinations/Destinations.compone
 import { BookingComponent } from './pages/booking/booking.component';
 import { DispoComponent } from './pages/dispo/dispo.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
-
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
@@ -37,7 +40,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

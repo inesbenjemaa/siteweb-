@@ -25,14 +25,7 @@
 <script src="/include/form/form8.js?9140390779549"></script>
 </head>
 
-<form method="post" id="FSForm" action="https://fs6.formsite.com/res/submit" enctype="application/x-www-form-urlencoded" onsubmit="return Vromansys.Form.processSubmit(this);">
-<div style="display:none">
-<input type="hidden" name="LocId" value="ZSGA2K/thyorjvra1" />
-<input type="hidden" name="EParam" value="AT1kKIiyxDyrVNWEKvMmDYnjqh0-izcTjAIzAAWZiU9llEwcDIyYJ4gagslzstLEYSC5uUYhxod-TbjzbWqaj0fOZmhhdGqw" />
-<input type="hidden" name="ElapsedTime" id="ElapsedTime" value="0" />
-<input type="hidden" name="Referrer" id="Referrer" value="" />
-<input type="text" name="subject_line" id="subject_line" autocomplete="off" /><label for="subject_line">subject_line</label>
-</div>
+<form #bookingForm="ngForm" (ngSubmit)="submitBookingData(bookingForm)">
 
 <!-- BEGIN_ITEMS -->
 <div class="form_table">
@@ -58,9 +51,12 @@
 
 <div id="q41" class="q required">
 <a class="item_anchor" name="ItemAnchor2"></a>
-<span class="question top_question">&nbsp;<b class="icon_required" style="color:#F00">*</b></span>
+<label class="question top_question" for="RESULT_TextField-3">Civilité&nbsp;<b class="icon_required" style="color:#F00">*</b></label>
 <table class="inline_grid choices">
-<tr><td><input type="radio" name="RESULT_RadioButton-2" class="multiple_choice" id="RESULT_RadioButton-2_0" value="Radio-0" /><label for="RESULT_RadioButton-2_0">Mr</label><td><input type="radio" name="RESULT_RadioButton-2" class="multiple_choice" id="RESULT_RadioButton-2_1" value="Radio-1" /><label for="RESULT_RadioButton-2_1">Mme</label><td><input type="radio" name="RESULT_RadioButton-2" class="multiple_choice" id="RESULT_RadioButton-2_2" value="Radio-2" /><label for="RESULT_RadioButton-2_2">Mlle</label></tr>
+<tr><td><input type="radio" class="multiple_choice" value="Mr" #civility="ngModel" 
+        [(ngModel)]="booking.civility" /><label for="RESULT_RadioButton-2_0">Mr</label><td><input type="radio" class="multiple_choice" value="Mme" #civility="ngModel" 
+        [(ngModel)]="booking.civility" /><label for="RESULT_RadioButton-2_1">Mme</label><td><input type="radio" class="multiple_choice" value="Mlle" #civility="ngModel" 
+        [(ngModel)]="booking.civility" /><label for="RESULT_RadioButton-2_2">Mlle</label></tr>
 </table>
 </div>
 
@@ -69,12 +65,14 @@
 <div id="q3" class="q required">
 <a class="item_anchor" name="ItemAnchor3"></a>
 <label class="question top_question" for="RESULT_TextField-3">Prénom&nbsp;<b class="icon_required" style="color:#F00">*</b></label>
-<input type="text" name="RESULT_TextField-3" class="text_field" id="RESULT_TextField-3"  size="35" value="" />
+<input type="text" name="RESULT_TextField-3" class="text_field" id="RESULT_TextField-3"  size="35" value="" #firstName="ngModel" 
+        [(ngModel)]="booking.firstName"/>
 </div>
 <div id="q4" class="q required">
 <a class="item_anchor" name="ItemAnchor4"></a>
 <label class="question top_question" for="RESULT_TextField-4">Nom&nbsp;<b class="icon_required" style="color:#F00">*</b></label>
-<input type="text" name="RESULT_TextField-4" class="text_field" id="RESULT_TextField-4"  size="35" value="" />
+<input type="text" name="RESULT_TextField-4" class="text_field" id="RESULT_TextField-4"  size="35" value="" #lastName="ngModel" 
+        [(ngModel)]="booking.lastName"/>
 </div>
 
 <div class="clear"></div>
@@ -82,12 +80,14 @@
 <div id="q5" class="q required">
 <a class="item_anchor" name="ItemAnchor5"></a>
 <label class="question top_question" for="RESULT_TextField-5">Mobile&nbsp;<b class="icon_required" style="color:#F00">*</b></label>
-<input type="text" name="RESULT_TextField-5" class="text_field" id="RESULT_TextField-5"  size="35" value="" />
+<input type="text" name="RESULT_TextField-5" class="text_field" id="RESULT_TextField-5"  size="35" value="" #mobile="ngModel" 
+        [(ngModel)]="booking.mobile"/>
 </div>
 <div id="q50" class="q required">
 <a class="item_anchor" name="ItemAnchor6"></a>
 <label class="question top_question" for="RESULT_TextField-6">Votre Email&nbsp;<b class="icon_required" style="color:#F00">*</b></label>
-<input type="email" name="RESULT_TextField-6" class="text_field" id="RESULT_TextField-6"  size="35" value="" />
+<input type="email" name="RESULT_TextField-6" class="text_field" id="RESULT_TextField-6"  size="35" value="" #email="ngModel" 
+        [(ngModel)]="booking.email"/>
 </div>
 
 <div class="clear"></div>
@@ -105,31 +105,35 @@
 <div id="q16" class="q required">
 <a class="item_anchor" name="ItemAnchor8"></a>
 <label class="question top_question" for="RESULT_TextField-8">Arrivée&nbsp;<b class="icon_required" style="color:#F00">*</b></label>
-<input type="text" name="RESULT_TextField-8" class="text_field calendar_field" id="RESULT_TextField-8" size="10" maxlength="10" datemax="" datemin="" value="" date="mm/dd/yy" />&nbsp;<span class="icon_calendar"><span class="accessibility_hidden">+</span></span>
+<input #dateArrival="ngModel" 
+        [(ngModel)]="booking.dateArrival" type="text" name="RESULT_TextField-8" class="text_field calendar_field" id="RESULT_TextField-8" size="10" maxlength="10" datemax="" datemin="" value="" date="mm/dd/yy" />&nbsp;<span class="icon_calendar"><span class="accessibility_hidden">+</span></span>
 </div>
 <div id="q17" class="q required">
 <a class="item_anchor" name="ItemAnchor9"></a>
 <label class="question top_question" for="RESULT_RadioButton-9">heure d'arrivée&nbsp;<b class="icon_required" style="color:#F00">*</b></label>
-<select id="RESULT_RadioButton-9" name="RESULT_RadioButton-9" class="drop_down">
+<select  #arrivingTime="ngModel" 
+        [(ngModel)]="booking.arrivingTime" id="RESULT_RadioButton-9" name="RESULT_RadioButton-9" class="drop_down">
 <option></option>
-<option value="Radio-0">Matin</option>
-<option value="Radio-1">Aprés midi</option>
-<option value="Radio-2">Soir</option>
+<option value="Matin">Matin</option>
+<option value="Aprés midi">Aprés midi</option>
+<option value="Soir">Soir</option>
 </select>
 </div>
 <div id="q19" class="q required">
 <a class="item_anchor" name="ItemAnchor10"></a>
 <label class="question top_question" for="RESULT_TextField-10">Départ&nbsp;<b class="icon_required" style="color:#F00">*</b></label>
-<input type="text" name="RESULT_TextField-10" class="text_field calendar_field" id="RESULT_TextField-10" size="10" maxlength="10" datemax="" datemin="" value="" date="mm/dd/yy" />&nbsp;<span class="icon_calendar"><span class="accessibility_hidden">+</span></span>
+<input #dateDeparture="ngModel" 
+        [(ngModel)]="booking.dateDeparture"  type="text" name="RESULT_TextField-10" class="text_field calendar_field" id="RESULT_TextField-10" size="10" maxlength="10" datemax="" datemin="" value="" date="mm/dd/yy" />&nbsp;<span class="icon_calendar"><span class="accessibility_hidden">+</span></span>
 </div>
 <div id="q20" class="q required">
 <a class="item_anchor" name="ItemAnchor11"></a>
 <label class="question top_question" for="RESULT_RadioButton-11">heure de départ&nbsp;<b class="icon_required" style="color:#F00">*</b></label>
-<select id="RESULT_RadioButton-11" name="RESULT_RadioButton-11" class="drop_down">
+<select id="RESULT_RadioButton-11" #departureTime="ngModel" 
+        [(ngModel)]="booking.departureTime" name="RESULT_RadioButton-11" class="drop_down">
 <option></option>
-<option value="Radio-0">Matin</option>
-<option value="Radio-1">Après Midi</option>
-<option value="Radio-2">Soir</option>
+<option value="Matin">Matin</option>
+<option value="Après Midi">Après Midi</option>
+<option value="Soir">Soir</option>
 </select>
 </div>
 
@@ -139,7 +143,8 @@
 <a class="item_anchor" name="ItemAnchor12"></a>
 <span class="question top_question"> Chambre &nbsp;<b class="icon_required" style="color:#F00">*</b></span>
 <table class="inline_grid choices">
-<tr><td><input type="radio" name="RESULT_RadioButton-12" class="multiple_choice" id="RESULT_RadioButton-12_0" value="Radio-0" /><label for="RESULT_RadioButton-12_0">classique</label><td><input type="radio" name="RESULT_RadioButton-12" class="multiple_choice" id="RESULT_RadioButton-12_1" value="Radio-1" /><label for="RESULT_RadioButton-12_1">De luxe</label><td><input type="radio" name="RESULT_RadioButton-12" class="multiple_choice" id="RESULT_RadioButton-12_2" value="Radio-2" /><label for="RESULT_RadioButton-12_2">Suite</label></tr>
+<tr><td><input type="radio" #roomType="ngModel" 
+        [(ngModel)]="booking.roomType" name="RESULT_RadioButton-12" class="multiple_choice" id="RESULT_RadioButton-12_0" value="classique" /><label for="RESULT_RadioButton-12_0">classique</label><td><input type="radio" name="RESULT_RadioButton-12" class="multiple_choice" id="RESULT_RadioButton-12_1" value="De luxe" /><label for="RESULT_RadioButton-12_1">De luxe</label><td><input type="radio" name="RESULT_RadioButton-12" class="multiple_choice" id="RESULT_RadioButton-12_2" value="Suite" /><label for="RESULT_RadioButton-12_2">Suite</label></tr>
 </table>
 </div>
 
@@ -148,29 +153,31 @@
 <div id="q48" class="q required">
 <a class="item_anchor" name="ItemAnchor13"></a>
 <label class="question left_question_first" for="RESULT_RadioButton-13">adultes&nbsp;<b class="icon_required" style="color:#F00">*</b></label>
-<select id="RESULT_RadioButton-13" name="RESULT_RadioButton-13" class="drop_down inline_answer">
+<select id="RESULT_RadioButton-13" #adultCounts="ngModel" 
+        [(ngModel)]="booking.adultCounts" name="RESULT_RadioButton-13" class="drop_down inline_answer">
 <option></option>
-<option value="Radio-0">1</option>
-<option value="Radio-1">2</option>
-<option value="Radio-2">3</option>
-<option value="Radio-3">4</option>
-<option value="Radio-4">5</option>
-<option value="Radio-5">6</option>
-<option value="Radio-6">7</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
 </select>
 </div>
 <div id="q47" class="q required">
 <a class="item_anchor" name="ItemAnchor14"></a>
 <label class="question left_question" for="RESULT_RadioButton-14">enfants&nbsp;<b class="icon_required" style="color:#F00">*</b></label>
-<select id="RESULT_RadioButton-14" name="RESULT_RadioButton-14" class="drop_down inline_answer">
+<select id="RESULT_RadioButton-14" #childrenCounts="ngModel" 
+        [(ngModel)]="booking.childrenCounts" name="RESULT_RadioButton-14" class="drop_down inline_answer">
 <option></option>
-<option value="Radio-0">1</option>
-<option value="Radio-1">2</option>
-<option value="Radio-2">3</option>
-<option value="Radio-3">4</option>
-<option value="Radio-4">5</option>
-<option value="Radio-5">6</option>
-<option value="Radio-6">7</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
 </select>
 </div>
 
@@ -179,7 +186,8 @@
 <div id="q22" class="q">
 <a class="item_anchor" name="ItemAnchor15"></a>
 <label class="question top_question" for="RESULT_TextArea-15">instructions spéciales</label>
-<textarea name="RESULT_TextArea-15" class="text_field" id="RESULT_TextArea-15" rows="5" cols="60"></textarea>
+<textarea name="RESULT_TextArea-15" #specialInstructions="ngModel" 
+        [(ngModel)]="booking.specialInstructions" class="text_field" id="RESULT_TextArea-15" rows="5" cols="60"></textarea>
 </div>
 
 <div class="clear"></div>
@@ -198,8 +206,10 @@
 <a class="item_anchor" name="ItemAnchor17"></a>
 <span class="question top_question">&nbsp;<b class="icon_required" style="color:#F00">*</b></span>
 <table class="inline_grid choices">
-<tr><td><input type="checkbox" name="RESULT_CheckBox-17" class="multiple_choice" id="RESULT_CheckBox-17_0" value="CheckBox-0" /><label for="RESULT_CheckBox-17_0">Je paie le montant total à l'agence</label></tr>
-<tr><td><input type="checkbox" name="RESULT_CheckBox-17" class="multiple_choice" id="RESULT_CheckBox-17_1" value="CheckBox-1" /><label for="RESULT_CheckBox-17_1">Je paie un acompte à l'agence  et le reste à l'hôtel</label></tr>
+<tr><td><input type="radio" name="paymentType" #paymentType="ngModel" 
+        [(ngModel)]="booking.paymentType"  class="multiple_choice" id="paymentType" value="paie total agence" /><label for="RESULT_CheckBox-17_0">Je paie le montant total à l'agence</label></tr>
+<tr><td><input type="radio" #paymentType="ngModel" 
+        [(ngModel)]="booking.paymentType" name="paymentType" class="multiple_choice" id="paymentType" value="paie acompte agence et acomptr hôtel" /><label for="RESULT_CheckBox-17_1">Je paie un acompte à l'agence  et le reste à l'hôtel</label></tr>
 </table>
 </div>
 
